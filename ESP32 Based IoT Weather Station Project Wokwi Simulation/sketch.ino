@@ -1,3 +1,6 @@
+//original file
+//https://github.com/Rafiq191/ESP32-Based-IoT-Weather-Station-Project-Wokwi-Simulation/blob/main/ESP32%20Based%20IoT%20Weather%20Station%20Project%20Wokwi%20Simulation/sketch.ino
+
 #include <WiFi.h>
 #include <ArduinoJson.h>
 #include <Wire.h>
@@ -7,10 +10,10 @@
 Adafruit_SSD1306 display(128, 64, &Wire, -1);
 
 
-const char* ssid     = "Wokwi-GUEST";         // SSID of local network
-const char* password = "";                    // Password on network
+const char* ssid     = "OOZTEST";         // SSID, nome della tua rete wifi
+const char* password = "diegodiego";                    // Password on network
 String APIKEY = "5ec3304b3ee7e4b92acfaa668a3c0ca8";
-String CityID = "1337200";          //Your City ID "Chittagong"
+String CityID = "3179778";          //Codice della tua localita, https://openweathermap.org/
 
 
 bool id = false;
@@ -24,7 +27,7 @@ void setup() {
 
    Serial.begin(115200);
 
-  Serial.print("Connecting to ");
+  Serial.print("Connessione in corso.. ");
   WiFi.mode(WIFI_STA);   //   create wifi station
   Serial.println(ssid);
   WiFi.begin(ssid, password);
@@ -37,7 +40,7 @@ void setup() {
   display.setTextSize(1);             // Normal 1:1 pixel scale
   display.setTextColor(SSD1306_WHITE);        // Draw white text
   display.setCursor(0, 0);            // Start at top-left corner
-  display.print("Connecting.");
+  display.print("connessione..");
   display.display();
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -128,8 +131,8 @@ void loop()
 
   display.clearDisplay();
   display.setCursor(0, 0);            // Start at top-left corner
-  display.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
-  display.print(" Location: ");
+  display.setTextColor(SSD1306_WHITE, SSD1306_BLACK);
+  display.print(" Loc: ");
   display.print(country);
   display.print(" ");
   display.println(location);
@@ -158,8 +161,8 @@ void loop()
   display.print("Lon: ");
   display.println(longitude);
   display.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
-  display.print("void loop robotech & ");
-  display.print("     Automation      ");
+  display.print(" SEGUIMI SU YOUTUBE");
+  display.print("          DIEGOOZ        ");
   
 
 
