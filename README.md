@@ -1,5 +1,5 @@
 # Mini visualizzatore di dati meteo con ESP32 e display Oled
-Basato sul lavoto di Rafiq191.
+Basato sul lavoto di Rafiq191. https://github.com/Rafiq191/ESP32-Based-IoT-Weather-Station-Project-Wokwi-Simulation
 
 Trovate il mio video dedicato sul mio canale Youtube:  https://www.youtube.com/@PixelsSquad
 
